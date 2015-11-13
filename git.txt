@@ -5,35 +5,36 @@ git add .
 git commit
 git commit -m "Comment"
 git commit -a -m "Comment"			- commit & add
-git mv fileName1 fileName2			- РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ fileName1 РІ fileName2
-git diff 							- РїСЂРѕСЃРјРѕС‚СЂ РёР·РјРµРЅРµРёР№ РІ С„Р°Р№Р»Рµ РґРѕ РЅР°С‡Р°Р»Р° С‚СЂРµРєРёС‚Р° (РґРѕ РІС‹РїРѕР»РЅРµРЅРёВ¤ РєРѕРјР°РЅРґС‹ add)
-git diff --cached					- СЃС‚Р°СЂР°СЏ РІРµСЂСЃРёСЏ staged 
-git diff --staged 					- РїСЂРѕСЃРјРѕС‚СЂ РёР·РјРµРЅРµРёР№ РІ С„Р°Р№Р»Рµ (РїРѕСЃР»Рµ РІС‹РїРѕР»РЅРµРЅРёВ¤ РєРѕРјР°РЅРґС‹ add)
-git log								- РІС‹РІРѕРґ РІСЃРµС… РєРѕРјРёС‚РѕРІ
-git log	-p							- РІС‹РІРѕРґ РІСЃРµС… РєРѕРјРёС‚РѕРІ РІ СЂР°Р·РІРµСЂРЅСѓС‚РѕРј РІР°СЂРёР°РЅС‚Рµ
-git log	-p -2						- РІС‹РІРѕРґ РІСЃРµС… РєРѕРјРёС‚РѕРІ РІ СЂР°Р·РІРµСЂРЅСѓС‚РѕРј РІР°СЂРёР°РЅС‚Рµ РґРІСѓС… РїРѕСЃР»РµРґРЅРёС… РєРѕРјРёС‚РѕРІ
-git checkout 7РїРµСЂРІС‹С…Р§РёРјРІРѕР»РѕРІРўРµС€вЂ РѕРґР° - РѕС‚РєР°С‚ РґРѕ РЅСѓР¶РЅРѕРіРѕ РєРѕРјРёС‚Р°
-git checkout master					- РѕС‚РєР°С‚ РґРѕ РїРѕСЃР»РµРґРЅРµРіРѕ РєРѕРјРёС‚Р°
-git reset HEAD fileName				- СЃРґРµР»Р°С‚СЊ fileName РЅРµРѕС‚СЃР»РµР¶РёРІР°РµРјС‹Рј (РµСЃР»Рё Р±С‹Р»Р° РєРѕРјР°РЅРґР° add)
-git checkout fileName				- РѕС‚РєР°С‚ РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° (РµСЃР»Рё Р±С‹Р» СѓРґР°Р»РµРЅ РєРѕРјР°РЅРґРѕР№ rm)
-git checkout -- fileName			- РѕС‚РєР°С‚ РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° (РµСЃР»Рё Р±С‹Р»Р° РєРѕРјР°РЅРґР° add)
+git mv fileName1 fileName2			- переименовать fileName1 в fileName2
+git diff 							- просмотр изменеий в файле до начала трекита (до выполнениЯ команды add)
+git diff --cached					- стараџ версиџ staged 
+git diff --staged 					- просмотр изменеий в файле (после выполнениЯ команды add)
+git log								- вывод всех комитов
+git log	-p							- вывод всех комитов в развернутом варианте
+git log	-p -2						- вывод всех комитов в развернутом варианте двух последних комитов
+git checkout 7первыхСимволовХешКода - откат до нужного комита
+git checkout master					- откат до последнего комита
+git reset HEAD fileName				- сделать fileName неотслеживаемым (если была команда add)
+git checkout fileName				- откат одного файла (если был удален командой rm)
+git checkout -- fileName			- откат одного файла (если была команда add)
 rm fileName							- remove file
 git rm fileName
-git log --graph						- СЃСѓРїРµСЂРіСЂР°С„РёРєР°, Р·РµР·РґРѕС‡РєРё
-git brunch							- РїСЂРѕСЃРјРѕС‚СЂ РІРµС‚РѕРє
-git brunch branchName				- СЃРѕР·РґР°РЅРёРµ РІРµС‚РєРё
-git brunch -d branchName			- СѓРґР°Р»РµРЅРёРµ РІРµС‚РєРё
-git brunch -D branchName			- РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕРµ СѓРґР°Р»РµРЅРёРµ РІРµС‚РєРё
-git checkout branchName				- РїРµСЂРµРєР»СЋС‡РµРЅРёРµ РЅР° РІРµС‚РєСѓ branchName
-git checkout -b branchName			- СЃРѕР·РґР°РЅРёРµ Рё РїРµСЂРµРєР»СЋС‡РµРЅРёРµ РЅР° РІРµС‚РєСѓ branchName
-git merge branchName				- СЃР»РёСЏРЅРёРµ РІРµС‚РєРё master СЃ branchName
-clone								- РєР»РѕРЅРёСЂСѓРµС‚ РЅР° Р»РѕРєР°Р»СЊРЅС‹Р№ РєРѕРјРї
-pull								- СЃРєР°С‡РёРІР°РµРј РёР·РјРµРЅРµРЅРёВ¤ СЃ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРёРј РјРµСЂР¶РµРј
-fetch								- СЃРєР°С‡РёРІР°РµРј РёР·РјРµРЅРµРЅРёВ¤ Р±РµР· Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ РјРµСЂР¶Р°
-push								- commit РЅР° СѓРґР°Р»РµРЅРЅС‹Р№ СЂРµРїРѕР·РёС‚РѕСЂРёР№
-git remote							- РїСЂРѕСЃРјРѕС‚СЂ СѓРґР°Р»РµРЅРЅС‹С… СЂРµРїРѕР·РёС‚РѕСЂРёРµРІ
-git remote -v						- РїСЂРѕСЃРјРѕС‚СЂ СѓРґР°Р»РµРЅРЅС‹С… СЂРµРїРѕР·РёС‚РѕСЂРёРµРІ СЃ РїСѓС‚В¤РјРё
+git log --graph						- суперграфика, зездочки
+git brunch							- просмотр веток
+git brunch branchName				- создание ветки
+git brunch -a						- просмотр всех веток (+   remoutes/mygit/master)
+git brunch -d branchName			- удаление ветки
+git brunch -D branchName			- принудительное удаление ветки
+git checkout branchName				- переключение на ветку branchName
+git checkout -b branchName			- создание и переключение на ветку branchName
+git merge branchName				- слиџние ветки master с branchName
+clone								- клонирует на локальный комп
+pull								- скачиваем изменениЯ с автоматическим мержем
+fetch								- скачиваем изменениЯ без автоматического мержа
+push								- commit на удаленный репозиторий
+git remote							- просмотр удаленных репозиториев
+git remote -v						- просмотр удаленных репозиториев с путЯми
 git remote add origin https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
 git remote add mygit https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
-git push mygit master				- Р·Р°Р»РёС‚СЊ РЅР° СѓРґР°Р»РµРЅРЅС‹Р№ СЂРµРїРѕР·РёС‚РѕСЂРёР№ mygit РёР· РІРµС‚РєРё master
-git push mygit -u master			- Р·Р°Р»РёС‚СЊ РЅР° СѓРґР°Р»РµРЅРЅС‹Р№ СЂРµРїРѕР·РёС‚РѕСЂРёР№ mygit РёР· РІРµС‚РєРё master Р±РµР· Р»РёС€РЅРёС… СЃРѕРѕР±С‰РµРЅРёР№
+git push mygit master				- залить на удаленный репозиторий mygit из ветки master
+git push mygit -u master			- залить на удаленный репозиторий mygit из ветки master без лишних сообщений
