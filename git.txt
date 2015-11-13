@@ -17,7 +17,7 @@ git checkout master					- откат до последнего комита
 git reset HEAD fileName				- сделать fileName неотслеживаемым (если была команда add)
 git checkout fileName				- откат одного файла (если был удален командой rm)
 git checkout -- fileName			- откат одного файла (если была команда add)
-rm fileName							- remove file
+rm fileName							- remove  file
 git rm fileName
 git log --graph						- суперграфика, зездочки
 git brunch							- просмотр веток
