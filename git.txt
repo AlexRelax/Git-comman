@@ -28,13 +28,24 @@ git brunch -D branchName			- принудительное удаление ветки
 git checkout branchName				- переключение на ветку branchName
 git checkout -b branchName			- создание и переключение на ветку branchName
 git merge branchName				- слиџние ветки master с branchName
+<<<<<<< HEAD
 git clone							- клонирует на локальный комп
 git pull							- скачиваем изменениЯ с автоматическим мержем
 git fetch							- скачиваем изменениЯ без автоматического мержа
 git push							- commit на удаленный репозиторий
+=======
+clone								- клонирует на локальный комп
+pull								- скачиваем изменениЯ с автоматическим мержем
+fetch								- скачиваем изменениЯ без автоматического мержа
+push								- commit на удаленный репозиторий
+>>>>>>> f2314ed84936c491854a0a21edf1ae0bee69a469
 git remote							- просмотр удаленных репозиториев
 git remote -v						- просмотр удаленных репозиториев с путЯми
 git remote add origin https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
 git remote add mygit https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
+<<<<<<< HEAD
 git push origin master				- залить на удаленный репозиторий origin из ветки master
+=======
+git push mygit master				- залить на удаленный репозиторий mygit из ветки master
+>>>>>>> f2314ed84936c491854a0a21edf1ae0bee69a469
 git push mygit -u master			- залить на удаленный репозиторий mygit из ветки master без лишних сообщений
