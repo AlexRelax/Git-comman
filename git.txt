@@ -36,5 +36,5 @@ git remote							- просмотр удаленных репозиториев
 git remote -v						- просмотр удаленных репозиториев с путЯми
 git remote add origin https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
 git remote add mygit https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
-git push mygit master				- залить на удаленный репозиторий mygit из ветки master
+git push origin master				- залить на удаленный репозиторий origin из ветки master
 git push mygit -u master			- залить на удаленный репозиторий mygit из ветки master без лишних сообщений
