@@ -1,0 +1,40 @@
+clear
+git status
+git add fileName
+git add .
+git commit
+git commit -m "Comment"
+git commit -a -m "Comment"			- commit & add
+git mv fileName1 fileName2			- переименовать fileName1 в fileName2
+git diff 							- просмотр изменеий в файле до начала трекита (до выполнениЯ команды add)
+git diff --cached					- стараџ версиџ staged 
+git diff --staged 					- просмотр изменеий в файле (после выполнениЯ команды add)
+git log								- вывод всех комитов
+git log	-p							- вывод всех комитов в развернутом варианте
+git log	-p -2						- вывод всех комитов в развернутом варианте двух последних комитов
+git checkout 7первыхСимволовХешКода - откат до нужного комита
+git checkout master					- откат до последнего комита
+git reset HEAD fileName				- сделать fileName неотслеживаемым (если была команда add)
+git checkout fileName				- откат одного файла (если был удален командой rm)
+git checkout -- fileName			- откат одного файла (если была команда add)
+rm fileName							- remove  file
+git rm fileName
+git log --graph						- суперграфика, зездочки
+git brunch							- просмотр веток
+git brunch branchName				- создание ветки
+git brunch -a						- просмотр всех веток (+   remoutes/mygit/master)
+git brunch -d branchName			- удаление ветки
+git brunch -D branchName			- принудительное удаление ветки
+git checkout branchName				- переключение на ветку branchName
+git checkout -b branchName			- создание и переключение на ветку branchName
+git merge branchName				- слиџние ветки master с branchName
+clone								- клонирует на локальный комп
+pull								- скачиваем изменениЯ с автоматическим мержем
+fetch								- скачиваем изменениЯ без автоматического мержа
+push								- commit на удаленный репозиторий
+git remote							- просмотр удаленных репозиториев
+git remote -v						- просмотр удаленных репозиториев с путЯми
+git remote add origin https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
+git remote add mygit https://AlexRelax@bitbucket.org/AlexRelax/git-command.git
+git push origin master				- залить на удаленный репозиторий origin из ветки master
+git push mygit -u master			- залить на удаленный репозиторий mygit из ветки master без лишних сообщений
